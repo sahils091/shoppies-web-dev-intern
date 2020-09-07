@@ -1,0 +1,68 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+.search {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  @include tablet {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+  background-color: $page-bg;
+  color: $text-color;
+
+  &__head-container {
+    padding-top: 2rem;
+  }
+  &__head {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &__subhead {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &__input-form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input-field {
+    border: 0.0625rem solid $divider-color;
+    background-color: $main-bg;
+    border-radius: 1.25rem;
+    height: 2.25rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-left: 0.625rem;
+    &:focus {
+      outline: none;
+      outline-color: $header-bg;
+      border: 1.5 px solid $header-bg;
+    }
+    @include tablet {
+      width: 45%;
+      padding-left: 1.625rem;
+    }
+  }
+  &__input-btn {
+    width: 100%;
+    height: 2.25rem;
+    margin-bottom: 1rem;
+    background-color: $accent-one;
+    border-radius: 1.25rem;
+    color: $main-bg;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $header-bg;
+    }
+    &:focus {
+      outline: none;
+      border: 1.5 px solid $header-bg;
+    }
+
+    @include tablet {
+      width: 20%;
+    }
+  }
+}

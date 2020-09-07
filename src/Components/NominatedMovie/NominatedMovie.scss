@@ -1,0 +1,47 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+.nominated {
+  &__container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  &__poster {
+    height: 10rem;
+    width: 8rem;
+    margin-bottom: 1rem;
+    margin-top: 0.6875rem;
+    transition: transform 0.4s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    @include tablet {
+      height: 13rem;
+      width: 11rem;
+    }
+  }
+
+  &__blurb-text {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__btn {
+    width: 6.625rem;
+    height: 2.25rem;
+    margin-bottom: 1rem;
+    background-color: $accent-one;
+    border-radius: 1.25rem;
+    color: $main-bg;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $header-bg;
+    }
+    &:focus {
+      outline: none;
+      border: 1.5 px solid $header-bg;
+    }
+  }
+}

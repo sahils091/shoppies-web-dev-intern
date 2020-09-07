@@ -1,0 +1,35 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.main {
+  background-color: $page-bg;
+  height: 100vh;
+  color: $text-color;
+
+  &__movies {
+    background-color: $page-bg;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    @include tablet{
+      padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    }
+  }
+  &__movie-heading {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  &__movie-results {
+    width: 50%;
+  }
+  &__movie-nominated {
+    width: 50%;
+  }
+}
